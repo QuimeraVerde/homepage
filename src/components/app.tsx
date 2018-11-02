@@ -1,4 +1,9 @@
 import * as React from "react";
-
-export const App = ({}) => 
-    <h1>Hello from the app!</h1>;
+​
+const App: React.SFC = ({}) => (
+  <div>
+      App
+  </div>
+);
+​
+export default App;

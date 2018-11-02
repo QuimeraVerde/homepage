@@ -1,9 +1,19 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import { createBrowserHistory } from 'history';
 
-import { App } from './components/app';
+import App from './components/App';
+​import configureStore from './configureStore';
 
-ReactDOM.render(
-    <App />,
-    document.getElementById("app-container")
+const history = createBrowserHistory();
+
+const initialState = window.initialReduxState;
+const store = configureStore(history, initialState);
+
+render(
+  <Provider store={store} history={history}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
 );
