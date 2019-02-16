@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --hot --colors --open",
-    "build": "webpack --mode=development --config webpack.config.js --watch",
-    "build-prod": "webpack --mode=production --config webpack.config.js --watch",
+    "build:watch": "webpack --mode=development --config webpack.config.js --watch",
+    "build-prod:watch": "webpack --mode=production --config webpack.config.js --watch",
+    "build": "webpack --mode=development --config webpack.config.js",
+    "build-prod": "webpack --mode=production --config webpack.config.js",
     "test": "jest"
   },
   "repository": {
