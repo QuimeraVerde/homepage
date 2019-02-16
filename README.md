@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/QuimeraVerde/homepage.svg?branch=master)](https://travis-ci.com/QuimeraVerde/homepage)
 
 # To setup you need:
 Webpack installed globally

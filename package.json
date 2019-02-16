@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --hot --colors --open",
-    "build": "webpack --mode=development --config webpack.config.js --watch",
-    "build-prod": "webpack --mode=production --config webpack.config.js --watch"
+    "build:watch": "webpack --mode=development --config webpack.config.js --watch",
+    "build-prod:watch": "webpack --mode=production --config webpack.config.js --watch",
+    "build": "webpack --mode=development --config webpack.config.js",
+    "build-prod": "webpack --mode=production --config webpack.config.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -19,18 +22,41 @@
   },
   "homepage": "https://github.com/QuimeraVerde/homepage#readme",
   "dependencies": {
-    "@types/react": "^16.4.18",
-    "@types/react-dom": "^16.0.9",
-    "npm": "^6.8.0",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0"
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2"
   },
   "devDependencies": {
+    "@types/enzyme": "^3.1.18",
+    "@types/jest": "^24.0.5",
     "awesome-typescript-loader": "^5.2.1",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.9.1",
+    "jest": "^24.1.0",
+    "react-test-renderer": "^16.8.2",
     "source-map-loader": "^0.2.4",
-    "typescript": "^3.1.4",
     "webpack": "^4.29.4",
     "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "^3.1.14"
+    "webpack-dev-server": "^3.1.14",
+    "travis": "^0.1.1",
+    "typescript": "^3.3.3",
+    "@types/react": "^16.8.3",
+    "@types/react-dom": "^16.8.2"
+  },
+  "jest": {
+    "setupFiles": [
+      "./testconfig/test-shim.js",
+      "./testconfig/test-setup.js"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "./testconfig/test-preprocessor.js"
+    },
+    "testMatch": [
+      "**/__tests__/*.(ts|tsx|js)"
+    ]
   }
 }
