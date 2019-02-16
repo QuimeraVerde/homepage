@@ -44,8 +44,8 @@
   },
   "jest": {
     "setupFiles": [
-      "./test-shim.js",
-      "./test-setup.js"
+      "./testconfig/test-shim.js",
+      "./testconfig/test-setup.js"
     ],
     "moduleFileExtensions": [
       "ts",
@@ -53,7 +53,7 @@
       "js"
     ],
     "transform": {
-      "^.+\\.(ts|tsx)$": "./test-preprocessor.js"
+      "^.+\\.(ts|tsx)$": "./testconfig/test-preprocessor.js"
     },
     "testMatch": [
       "**/__tests__/*.(ts|tsx|js)"
