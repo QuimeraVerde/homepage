@@ -1,4 +1,8 @@
 import * as React from "react";
+import { useTranslation } from 'react-i18next';
 
-export const App = ({}) => 
-    <h1>Hello from the app!</h1>;
+export const App = ({}) => {
+    const { t } = useTranslation();
+
+    return <h1>{t('welcome')}</h1>;
+}
