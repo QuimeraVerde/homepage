@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 import { App } from './components/app';
+import "./style/main.scss"
 
 // Import i18n so its bundled by webpack
 import './i18n';

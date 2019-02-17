@@ -1,0 +1,23 @@
+.background-img {
+    display: inline-flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    .overlay {
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        position: absolute;
+        &.green {
+            background-color: rgba(126, 201, 143, 0.57);
+        }
+    }
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}

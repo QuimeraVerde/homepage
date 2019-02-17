@@ -20,8 +20,17 @@ module.exports = {
     module: {
         rules: [
             { test: /\.js$/, use: 'source-map-loader', enforce: 'pre' },
-            { test: /\.tsx?$/, use: 'awesome-typescript-loader' }
-        ],
+            { test: /\.tsx?$/, use: 'awesome-typescript-loader' },
+            { test: /\.(png|svg|jpg|gif)$/, use: 'file-loader' },
+            {
+                test: /\.scss$/,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader"
+                ]
+            }
+        ]
     },
     externals: {
         'react': 'React',
