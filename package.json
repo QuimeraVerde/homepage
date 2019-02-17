@@ -62,6 +62,9 @@
       "tsx",
       "js"
     ],
+    "moduleNameMapper": {
+      "\\.(jpg|png|gif|svg)$": "<rootDir>/src/__mocks__/fileMock.js"
+    },
     "transform": {
       "^.+\\.(ts|tsx)$": "./testconfig/test-preprocessor.js"
     },
