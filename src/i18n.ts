@@ -4,13 +4,13 @@ import { initReactI18next } from 'react-i18next';
 import * as Backend from 'i18next-xhr-backend';
 import * as LanguageDetector from 'i18next-browser-languagedetector';
 
-// call require() on each json in the locales directory so it is added to webpack's
-// dependency graph. (require on a json returns whole json object)
+// use require() to get each json in the locales directory
 const context = (require as any).context('./locales/', true, /\.json$/);
 const locales: string[] = [];
 
 context.keys().forEach((key: string) => {
-    // key is of format `en/translations.json`.
+    // key is of format `en/translations.json`
+    
     // Extract the locale from this path:
     const split = key.split('/');
     const lng = split[split.length - 2];
