@@ -1,0 +1,25 @@
+.Cursor {
+    border-left: 4px solid rgba(255, 255, 255, .75);
+    white-space: nowrap;
+    overflow: hidden;
+    color: transparent;
+    &.Cursor--blinking {
+        animation: blinkTextCursor 500ms steps(5) infinite normal
+    }
+}
+
+.typewriter-message {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-left-color: rgba(255, 255, 255, .75);
+    }
+    to {
+        border-left-color: transparent;
+    }
+}

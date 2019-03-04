@@ -51,7 +51,8 @@ i18n.init({
         loadPath: '{{lng}}/{{ns}}',
         parse: (data: any) => data,
         ajax: loadLocales
-    }
+    },
+    returnObjects: true
 });
 
 export default i18n;
