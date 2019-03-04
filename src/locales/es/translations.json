@@ -1,3 +1,10 @@
 {
-    "welcome": "Bienvenido a React!"
+    "hookMessage": {
+        "prefix": "Hablemos sobre",
+        "suffix": [
+            "el aire",
+            "el agua",
+            "la basura"
+        ]
+    }
 }
