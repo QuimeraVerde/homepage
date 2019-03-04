@@ -4,7 +4,7 @@ import HookMessageSuffix from "./hookMessageSuffix"
 
 const HookMessage = ({}) => {
     const { t } = useTranslation();
-    const suffixes = t(`hookMessage.suffix`) as string[]
+    const suffixes = t('hookMessage.suffix') as string[]
 
     // Update suffix
     const [count, setCount] = React.useState(0);
